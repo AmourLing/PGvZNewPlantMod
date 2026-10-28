@@ -245,6 +245,8 @@ dotnet run --project tests\VerifyHost -c Release
 - `src/PGvZPlantKit/Assets/card_background_*.png`：green/purple/gray 三张卡槽底图
 - `tests/save-evidence-*/`：实机证据里带的玩家存档
 
-`.gitignore` 已按上述路径忽略；仓库里只有代码（C#/Python/工程/文档）。从云端克隆下来后
+`.gitignore` 已按上述路径忽略；仓库里只有代码（C#/Python/工程/文档）。
+**没有素材也能编译**：这些 `EmbeddedResource` 已改成"有文件就嵌、没有就跳过"，
+所以克隆下来直接 `dotnet build` 是 0 错误的，只是运行时缺图（卡槽底图 / 植物立绘显示不出来）。从云端克隆下来后
 想完整构建，需要自己在本地补齐这些素材目录。**分发用的安装包不受影响** ——
 `tools/打包.py` 是从本机构建产物打 zip，素材照常带上。

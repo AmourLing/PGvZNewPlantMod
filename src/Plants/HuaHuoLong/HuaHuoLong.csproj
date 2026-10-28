@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Assets\hhl_card.png">
+    <EmbeddedResource Include="Assets\hhl_card.png" Condition="Exists('Assets\hhl_card.png')">
       <LogicalName>PGvZNewPlantMod.Assets.%(Filename)%(Extension)</LogicalName>
     </EmbeddedResource>
   </ItemGroup>

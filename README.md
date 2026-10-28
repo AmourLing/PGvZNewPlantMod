@@ -158,6 +158,9 @@ powershell -ExecutionPolicy Bypass -File .\tools\部署.ps1 `
 
 ## 分发打包
 
+官方下载地址：<https://pan.quark.cn/s/c20466c6fe12>（以这个为准，
+仓库里只有源码，安装包不在 GitHub 上）。
+
 与 PGvZOnlineMod / PvZWSTools_Inner / 植物娘AI对话 使用同一套约定：
 
 ```bat

@@ -114,9 +114,9 @@ def stamp_dir(publish):
     stamp = time.strftime("%Y%m%d_%H%M%S")
     root = os.path.join(PUBLISH, stamp)
     layout = {
-        "framework": os.path.join(root, "前置模组"),
+        "framework": os.path.join(root, "仅前置模组"),
         "plants": os.path.join(root, "模组植物"),
-        "full": os.path.join(root, "全量"),
+        "full": os.path.join(root, "全量整合"),
     }
     for path in layout.values():
         os.makedirs(path, exist_ok=True)

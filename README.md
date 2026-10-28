@@ -165,11 +165,19 @@ tools\打包.cmd          :: 候选包
 tools\发布.cmd          :: 正式包（先写 update.md，确认后输入 yes）
 ```
 
-输出：
+输出（每次一个时间戳目录，里面分三个文件夹）：
 
 ```text
-publish\PGvZNewPlantMod_CSharp_发布_YYYYMMDD_HHMMSS.zip
+publish\YYYYMMDD_HHMMSS\
+├─ 前置模组\PGvZNewPlantMod_前置模组_*.zip      宿主 + 框架 + 空清单，不含任何模组植物
+├─ 模组植物\<植物名>_*.zip                       每株一个包，只装那一个植物文件
+└─ 全量\PGvZNewPlantMod_全量_*.zip               上面两者合起来（清单 + 全部植物）
 ```
+
+- **前置模组**：`plant_packs.json` 是空清单、`plants/` 是空目录。装它有框架但场上没有模组植物；
+  之后把任意「模组植物」包解压进去（同一层）就多一株，kit 会自己把它补进清单。
+- **模组植物**：一个包一个植物文件（`PGvZNewPlantMod/plants/<名字>.dll` 或 `.py`），不带框架。
+- **全量**：给"一次装完"的人用；`--publish` 记录的就是这个包。
 
 压缩包内不套 `mods/`，直接解压进游戏的 `mods` 目录：
 

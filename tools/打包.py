@@ -135,11 +135,24 @@ def plant_id(name):
     return base.split(".", 1)[1] if base.startswith("PGvZNewPlantMod.") else base
 
 
-def read_me(now):
+PLANT_STEP = (
+    "   单株植物：把包里的 \"{file}\" 直接放进\n"
+    "     mods\\PGvZNewPlantMod\\plants\\ （已装前置模组的话这个目录已经存在），\n"
+    "     不需要解压覆盖别的文件，也不用改 plant_packs.json —— 启动时会自动登记。\n"
+)
+
+
+def read_me(now, kind, file_name=None):
     if os.path.exists(TEMPLATE):
         with open(TEMPLATE, "r", encoding="utf-8-sig") as f:
-            return f.read().replace("{now}", now)
-    return "PGvZNewPlantMod\n打包时间：%s\n" % now
+            text = f.read()
+    else:
+        text = "PGvZNewPlantMod\n打包时间：{now}\n本包类型：{kind}\n"
+    text = text.replace("{now}", now).replace("{kind}", kind)
+    if file_name:
+        return text.replace("{install_extra}", PLANT_STEP.replace("{file}", file_name))
+    # 前置/全量没有"单株那一步"，整段连同它前面的空行一起去掉。
+    return text.replace("\n" + PLANT_STEP, "").replace("{install_extra}", "")
 
 
 def write_common(z, readme, notes=None):
@@ -152,8 +165,9 @@ def write_common(z, readme, notes=None):
     return count
 
 
-def make_framework(layout, readme, stamp):
+def make_framework(layout, now, stamp):
     """前置模组：宿主 + 框架 + 清单，plants 目录留空（不含任何模组植物）。"""
+    readme = read_me(now, "前置模组（只有框架，不含任何模组植物）")
     path = os.path.join(layout["framework"], "PGvZNewPlantMod_前置模组_%s.zip" % stamp)
     count = 0
     with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as z:
@@ -178,21 +192,23 @@ def make_framework(layout, readme, stamp):
     return path, count
 
 
-def make_plant_packs(layout, readme, stamp):
-    """每个模组植物一个包：只装那一个植物文件，丢进前置包同名目录即生效。"""
+def make_plant_packs(layout, now):
+    """每个模组植物一个包：文件就在压缩包根层，丢进 plants\\ 即生效；名字不带日期。"""
     made = []
     for name in plant_files():
         pid = plant_id(name)
-        path = os.path.join(layout["plants"], "%s_%s.zip" % (pid, stamp))
+        readme = read_me(now, "单株模组植物：%s" % pid, name)
+        path = os.path.join(layout["plants"], "%s.zip" % pid)
         with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as z:
-            z.write(os.path.join(DATA, "plants", name), "PGvZNewPlantMod/plants/" + name)
+            z.write(os.path.join(DATA, "plants", name), name)
             count = 1 + write_common(z, readme)
         made.append((pid, path, count))
     return made
 
 
-def make_full(layout, readme, stamp, publish, notes):
+def make_full(layout, now, stamp, publish, notes):
     """全量包：现在的默认布局（宿主 + 框架 + 全部植物 + 清单 + 素材）。"""
+    readme = read_me(now, "全量（框架 + 全部模组植物）")
     path = os.path.join(layout["full"], "PGvZNewPlantMod_全量_%s.zip" % stamp)
     count = 0
     with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as z:
@@ -220,11 +236,10 @@ def make_packages(publish, version):
     stamp, layout = stamp_dir(publish)
     notes = notes_text()
     now = time.strftime("%Y-%m-%d %H:%M")
-    readme = read_me(now)
 
-    framework, framework_count = make_framework(layout, readme, stamp)
-    plants = make_plant_packs(layout, readme, stamp)
-    full, full_count = make_full(layout, readme, stamp, publish, notes)
+    framework, framework_count = make_framework(layout, now, stamp)
+    plants = make_plant_packs(layout, now)
+    full, full_count = make_full(layout, now, stamp, publish, notes)
 
     print("## 打包完成：%s" % os.path.join(PUBLISH, stamp))
     print("   前置模组：%s（%d 个文件，%d bytes）" % (

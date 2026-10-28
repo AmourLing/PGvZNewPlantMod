@@ -22,3 +22,11 @@ roundtrip.expected.json
 state.baseline.json
 state.reloaded.json
 state.slot-reloaded.json
+
+# 非原创素材：只在本地参与构建，不进仓库、不上云（云端只放源码）
+**/Assets/*.png
+**/Assets/Reanim/
+**/Assets/Spine/
+**/Assets/Images/
+# 测试留下的存档证据（含玩家 userdata）
+tests/save-evidence-*/

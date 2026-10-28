@@ -230,8 +230,20 @@ dotnet run --project tests\VerifyHost -c Release
 
 ## 日志与存档
 
-- 日志：`%AppData%\ZBC\PlantGirlsVsZombies\mods\PGvZNewPlantMod\plant_kit.log`
-- 关卡存档：模组植物写进游戏自己的关卡存档（`docs/userdata/game<档案>_<模式>.dat`），
+- 日志：`%AppData%\ZBC\PlantGirlsVsZombies\mods\PGvZNewPlantMod\plant_kit.log`- 关卡存档：模组植物写进游戏自己的关卡存档（`docs/userdata/game<档案>_<模式>.dat`），
   植物身份用 `包ID:植物名` 而不是数字 SeedId，所以增删包不会让旧存档串位。
 - 侧车存档：`%AppData%\ZBC\PlantGirlsVsZombies\mods\PGvZNewPlantMod\SaveData\`
   放游戏引擎装不下的额外记录（瓷砖分布、小守卫菇站位等），按存档文件配对。
+
+## 云端只放源码（素材不进仓库）
+
+部分模组植物的美术不是本项目原创（移植自其它作者的植物包），框架的通用卡槽底图也是从
+游戏资源里解出来的。这些**只在本地参与构建**，不进 git、不上云：
+
+- `src/Plants/*/Assets/`、`src/Plants/_archived/*/Assets/`：逐帧动画（.reanim + PNG）、Spine、立绘、卡图
+- `src/PGvZPlantKit/Assets/card_background_*.png`：green/purple/gray 三张卡槽底图
+- `tests/save-evidence-*/`：实机证据里带的玩家存档
+
+`.gitignore` 已按上述路径忽略；仓库里只有代码（C#/Python/工程/文档）。从云端克隆下来后
+想完整构建，需要自己在本地补齐这些素材目录。**分发用的安装包不受影响** ——
+`tools/打包.py` 是从本机构建产物打 zip，素材照常带上。

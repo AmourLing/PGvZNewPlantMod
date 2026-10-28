@@ -33,3 +33,6 @@ tests/save-evidence-*/
 # 探针临时产物（从游戏图集里抠出来的素材，不进仓库）
 tests/*.bmp
 tests/*.rgba
+# 不上云：已归档的废弃工程、测试工具（只留在本地）
+src/Plants/_archived/
+tests/

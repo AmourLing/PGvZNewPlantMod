@@ -19,8 +19,4 @@
     <Project Path="src/PGvZNewPlantMod/PGvZNewPlantMod.csproj" />
     <Project Path="src/PGvZPlantKit/PGvZPlantKit.csproj" />
   </Folder>
-  <Folder Name="/tests/">
-    <Project Path="tests/LiveSavePlugin/LiveSavePlugin.csproj" />
-    <Project Path="tests/VerifyHost/VerifyHost.csproj" />
-  </Folder>
 </Solution>

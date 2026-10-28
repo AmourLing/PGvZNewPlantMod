@@ -98,6 +98,11 @@ def build():
             return False
     print("## mod 编译 OK")
     print("## VerifyHost 回归...")
+    # tests/ 不含在上传的解决方案里（测试工具不上云），所以这里单独构建台架再跑。
+    if run(["dotnet", "build", os.path.join(VERIFY, "VerifyHost.csproj"),
+            "-c", "Release", "--nologo", "-v", "minimal"]) != 0:
+        print("## VerifyHost 编译失败，中止")
+        return False
     if run(["dotnet", "run", "--project", VERIFY, "-c", "Release", "--no-build"]) != 0:
         print("## VerifyHost 回归未通过，中止")
         return False

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>PGvZNewPlantMod.LuoJi</AssemblyName>
+    <RootNamespace>PGvZNewPlantMod.Plants</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\loki_card.png">
+      <LogicalName>PGvZNewPlantMod.Assets.%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

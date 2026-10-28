@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "_comment": "复制为 plant_packs.json 后修改。packs 数组顺序即加载顺序，前面优先；enabled=false 不注册该包植物；before/after 可引用包 ID 或 ID 数组；dependencies 等价于本包 after 这些包。未列出的包在内存中按 ID 字母序追加并默认启用；PGvZNewPlantMod 宿主会把新发现的 .py 和插件 DLL 自动追加为 enabled=true，已有条目和顺序不变。",
+  "packs": [
+    {
+      "id": "example.first",
+      "enabled": true,
+      "before": ["example.second"]
+    },
+    {
+      "id": "example.second",
+      "enabled": true,
+      "chooser_order_note": "chooser_order 是植物字段，不是包字段",
+      "dependencies": []
+    },
+    {
+      "id": "example.disabled",
+      "enabled": false
+    }
+  ]
+}

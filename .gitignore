@@ -1,0 +1,24 @@
+# 构建产物
+bin/
+obj/
+publish/
+
+# 隔离沙盒（整个游戏的副本、存档、截图，约 1.7 GB）
+tests/save-sandbox/
+
+# IDE / 本机快捷方式
+.vs/
+*.user
+*.lnk
+
+# 运行时输出
+*.log
+__pycache__/
+*.pyc
+tests/VerifyHost/bin/
+diagnostics.offline.txt
+roundtrip.dat
+roundtrip.expected.json
+state.baseline.json
+state.reloaded.json
+state.slot-reloaded.json

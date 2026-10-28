@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>PGvZNewPlantMod.HuaHuoLong</AssemblyName>
+    <RootNamespace>PGvZNewPlantMod.Plants</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\hhl_card.png">
+      <LogicalName>PGvZNewPlantMod.Assets.%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

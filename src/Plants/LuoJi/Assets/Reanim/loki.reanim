@@ -1,0 +1,13 @@
+<fps>10</fps>
+<track>
+<name>anim_idle</name>
+<t><x>0.0</x><y>13.0</y><sx>1</sx><sy>1</sy><f>0</f><i>IMAGE_REANIM_LOKI_IDLE_000</i></t>
+<t><i>IMAGE_REANIM_LOKI_IDLE_001</i></t>
+<t><i>IMAGE_REANIM_LOKI_IDLE_002</i></t>
+<t><i>IMAGE_REANIM_LOKI_IDLE_003</i></t>
+<t><i>IMAGE_REANIM_LOKI_IDLE_004</i></t>
+<t><i>IMAGE_REANIM_LOKI_IDLE_005</i></t>
+<t><i>IMAGE_REANIM_LOKI_IDLE_006</i></t>
+<t><i>IMAGE_REANIM_LOKI_IDLE_007</i></t>
+<t><i>IMAGE_REANIM_LOKI_IDLE_008</i></t>
+</track>

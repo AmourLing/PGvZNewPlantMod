@@ -1,0 +1,48 @@
+
+hjbl.png
+size: 672,1156
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 2, 6
+  size: 353, 407
+  orig: 356, 409
+  offset: 1, 1
+  index: -1
+hand-l
+  rotate: false
+  xy: 411, 2
+  size: 231, 342
+  orig: 231, 342
+  offset: 0, 0
+  index: -1
+hand-r
+  rotate: false
+  xy: 433, 346
+  size: 237, 352
+  orig: 237, 352
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 700
+  size: 645, 454
+  orig: 647, 458
+  offset: 1, 2
+  index: -1
+leg-l
+  rotate: true
+  xy: 2, 361
+  size: 145, 427
+  orig: 145, 427
+  offset: 0, 0
+  index: -1
+leg-r
+  rotate: true
+  xy: 2, 508
+  size: 190, 429
+  orig: 190, 429
+  offset: 0, 0
+  index: -1

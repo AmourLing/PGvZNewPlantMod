@@ -1,0 +1,84 @@
+﻿
+super_gatlingpea.png
+size: 1879,1000
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images_final/body
+  rotate: true
+  xy: 2, 2
+  size: 460, 371
+  orig: 460, 371
+  offset: 0, 0
+  index: -1
+images_final/gun-r
+  rotate: false
+  xy: 375, 3
+  size: 1166, 459
+  orig: 1168, 461
+  offset: 1, 1
+  index: -1
+images_final/gun-l
+  rotate: false
+  xy: 375, 3
+  size: 1166, 459
+  orig: 1168, 461
+  offset: 1, 1
+  index: -1
+images_final/head
+  rotate: true
+  xy: 1123, 480
+  size: 518, 426
+  orig: 518, 426
+  offset: 0, 0
+  index: -1
+images_final/left_lower_arm
+  rotate: false
+  xy: 1543, 48
+  size: 183, 233
+  orig: 183, 233
+  offset: 0, 0
+  index: -1
+images_final/left_lower_leg
+  rotate: true
+  xy: 1551, 835
+  size: 163, 313
+  orig: 163, 313
+  offset: 0, 0
+  index: -1
+images_final/left_upper_leg
+  rotate: true
+  xy: 1551, 453
+  size: 189, 267
+  orig: 189, 267
+  offset: 0, 0
+  index: -1
+images_final/right_lower_arm
+  rotate: false
+  xy: 1728, 60
+  size: 149, 221
+  orig: 149, 222
+  offset: 0, 0
+  index: -1
+images_final/right_lower_leg
+  rotate: true
+  xy: 1551, 644
+  size: 189, 300
+  orig: 189, 300
+  offset: 0, 0
+  index: -1
+images_final/right_upper_leg
+  rotate: true
+  xy: 1543, 283
+  size: 168, 265
+  orig: 168, 265
+  offset: 0, 0
+  index: -1
+images_final/weapon
+  rotate: false
+  xy: 2, 464
+  size: 1119, 534
+  orig: 1119, 534
+  offset: 0, 0
+  index: -1
+

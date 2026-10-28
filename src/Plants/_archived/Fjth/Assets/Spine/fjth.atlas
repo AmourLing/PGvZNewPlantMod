@@ -1,0 +1,83 @@
+
+fjth.png
+size: 2021,911
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 978, 430
+  size: 558, 479
+  orig: 560, 481
+  offset: 1, 1
+  index: -1
+eye-cl
+  rotate: false
+  xy: 1567, 50
+  size: 124, 31
+  orig: 126, 33
+  offset: 1, 1
+  index: -1
+eye-cr
+  rotate: false
+  xy: 2, 15
+  size: 134, 33
+  orig: 137, 35
+  offset: 1, 1
+  index: -1
+eye-l
+  rotate: false
+  xy: 1875, 2
+  size: 118, 93
+  orig: 121, 95
+  offset: 2, 1
+  index: -1
+eye-r
+  rotate: true
+  xy: 1870, 380
+  size: 142, 99
+  orig: 144, 101
+  offset: 1, 1
+  index: -1
+hand-l
+  rotate: false
+  xy: 1567, 259
+  size: 301, 263
+  orig: 303, 265
+  offset: 1, 1
+  index: -1
+hand-r
+  rotate: false
+  xy: 1538, 524
+  size: 451, 385
+  orig: 451, 385
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 50
+  size: 974, 859
+  orig: 976, 861
+  offset: 1, 1
+  index: -1
+leg-l
+  rotate: false
+  xy: 1875, 97
+  size: 144, 281
+  orig: 146, 284
+  offset: 1, 1
+  index: -1
+leg-r
+  rotate: true
+  xy: 1567, 83
+  size: 174, 306
+  orig: 176, 308
+  offset: 1, 1
+  index: -1
+weapon
+  rotate: true
+  xy: 978, 40
+  size: 388, 587
+  orig: 390, 589
+  offset: 1, 1
+  index: -1

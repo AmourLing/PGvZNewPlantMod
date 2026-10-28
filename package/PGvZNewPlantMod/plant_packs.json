@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "packs": [
+    {
+      "id": "ExamplePlantProducer",
+      "enabled": true
+    },
+    {
+      "id": "ExamplePlantShooter",
+      "enabled": true
+    },
+    {
+      "id": "ExamplePlantPult",
+      "enabled": true
+    },
+    {
+      "id": "ExamplePlantSpecialBomb",
+      "enabled": true
+    },
+    {
+      "id": "pgvz.fantian",
+      "enabled": true
+    },
+    {
+      "id": "pgvz.seedpacket_imitater",
+      "enabled": true
+    },
+    {
+      "id": "pgvz.seedpacket_flower",
+      "enabled": true
+    },
+    {
+      "id": "pgvz.plant_buster",
+      "enabled": true
+    },
+    {
+      "id": "pgvz.doom_cannon",
+      "enabled": true
+    },
+    {
+      "id": "pgvz.hua_huo_long",
+      "enabled": true
+    },
+    {
+      "id": "pgvz.ares",
+      "enabled": true
+    },
+    {
+      "id": "pgvz.chocolate_cannon",
+      "enabled": true
+    },
+    {
+      "id": "pgvz.loki",
+      "enabled": true
+    },
+    {
+      "id": "pgvz.teitisi",
+      "enabled": true
+    }
+  ]
+}

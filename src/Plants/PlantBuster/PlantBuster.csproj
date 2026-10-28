@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>PGvZNewPlantMod.PlantBuster</AssemblyName>
+    <RootNamespace>PGvZNewPlantMod.Plants</RootNamespace>
+  </PropertyGroup>
+
+</Project>

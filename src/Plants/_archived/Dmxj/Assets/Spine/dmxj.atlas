@@ -1,0 +1,97 @@
+
+dmxj.png
+size: 648,1022
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 2, 298
+  size: 310, 380
+  orig: 312, 382
+  offset: 1, 1
+  index: -1
+eye-cl
+  rotate: false
+  xy: 373, 20
+  size: 56, 16
+  orig: 58, 18
+  offset: 1, 1
+  index: -1
+eye-cr
+  rotate: false
+  xy: 394, 695
+  size: 59, 15
+  orig: 61, 17
+  offset: 1, 1
+  index: -1
+eye-l
+  rotate: false
+  xy: 497, 339
+  size: 58, 47
+  orig: 61, 50
+  offset: 2, 2
+  index: -1
+eye-r
+  rotate: false
+  xy: 497, 388
+  size: 83, 53
+  orig: 86, 55
+  offset: 1, 1
+  index: -1
+hand-l
+  rotate: false
+  xy: 373, 38
+  size: 155, 260
+  orig: 155, 260
+  offset: 0, 0
+  index: -1
+hand-r
+  rotate: false
+  xy: 461, 443
+  size: 170, 267
+  orig: 170, 274
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 680
+  size: 390, 340
+  orig: 393, 343
+  offset: 1, 2
+  index: -1
+leg-l
+  rotate: false
+  xy: 314, 407
+  size: 145, 271
+  orig: 145, 271
+  offset: 0, 0
+  index: -1
+leg-r
+  rotate: false
+  xy: 2, 2
+  size: 181, 294
+  orig: 185, 294
+  offset: 0, 0
+  index: -1
+weapon-c
+  rotate: false
+  xy: 314, 300
+  size: 181, 105
+  orig: 183, 107
+  offset: 1, 1
+  index: -1
+weapon-l
+  rotate: true
+  xy: 185, 7
+  size: 289, 186
+  orig: 291, 188
+  offset: 1, 1
+  index: -1
+weapon-r
+  rotate: true
+  xy: 394, 712
+  size: 308, 252
+  orig: 312, 254
+  offset: 2, 1
+  index: -1

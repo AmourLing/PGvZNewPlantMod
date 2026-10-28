@@ -1,0 +1,75 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- 游戏加载器把 mods/ 顶层的 DLL 按文件名 Assembly.LoadFrom，并 ImportModule(程序集名)，
+         因此程序集名必须与部署后的 DLL 文件名、PythonModule 特性里的名字一致。 -->
+    <AssemblyName>PGvZNewPlantMod</AssemblyName>
+    <RootNamespace>PGvZNewPlantMod</RootNamespace>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <LangVersion>10.0</LangVersion>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 运行时数据模板：复制到 bin 下并保持 PGvZNewPlantMod/ 目录名。 -->
+    <None Include="..\..\package\PGvZNewPlantMod\**"
+          Link="PGvZNewPlantMod\%(RecursiveDir)%(Filename)%(Extension)"
+          CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PGvZPlantKit\PGvZPlantKit.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- 只构建，不引用：插件通过 IPlantPack 反射加载，宿主不依赖植物类型。
+         新增一个植物工程 = 在 src\Plants 下建目录，这里不用再改。 -->
+    <PlantPluginProject Include="..\Plants\*\*.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="@(PlantPluginProject)" ReferenceOutputAssembly="false" Private="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Lawn">
+      <HintPath>..\..\..\..\PlantGirlsVsZombies\LawnDLL\Lawn.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="IronPython">
+      <HintPath>..\..\..\..\PlantGirlsVsZombies\LawnDLL\IronPython.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.Scripting">
+      <HintPath>..\..\..\..\PlantGirlsVsZombies\LawnDLL\Microsoft.Scripting.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>..\..\..\..\PlantGirlsVsZombies\LawnDLL\MonoMod.RuntimeDetour.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\..\..\..\PlantGirlsVsZombies\LawnDLL\MonoGame.Framework.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="CopyPlantPlugins" AfterTargets="Build">
+    <ItemGroup>
+      <PlantPluginDll Include="$(MSBuildProjectDirectory)\..\Plants\*\bin\$(Configuration)\net6.0\PGvZNewPlantMod.*.dll" />
+      <!-- 移走/废弃的工程不再产出 DLL；输出目录里的旧副本必须一起清掉，
+           否则部署和打包会把已删的植物继续带出去。 -->
+      <StalePlantPluginDll Include="$(TargetDir)PGvZNewPlantMod\plants\PGvZNewPlantMod.*.dll"
+                           Exclude="@(PlantPluginDll->'$(TargetDir)PGvZNewPlantMod\plants\%(Filename).dll')" />
+    </ItemGroup>
+    <Copy SourceFiles="@(PlantPluginDll)"
+          DestinationFolder="$(TargetDir)PGvZNewPlantMod\plants"
+          SkipUnchangedFiles="true" />
+    <Delete Files="@(StalePlantPluginDll)" />
+  </Target>
+
+</Project>

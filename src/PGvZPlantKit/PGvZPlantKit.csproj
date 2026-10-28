@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- 可被其他 C# mod / IronPython mod 引用的框架库；不含任何具体植物。 -->
+    <AssemblyName>PGvZPlantKit</AssemblyName>
+    <RootNamespace>PGvZPlantKit</RootNamespace>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <LangVersion>10.0</LangVersion>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 通用卡槽背景 green/purple/gray：裸立绘的模组卡先垫这张，再把立绘/动画叠上去。
+         默认逻辑名即 PGvZPlantKit.Assets.<文件名>.png，AssetStore 按文件名取用。 -->
+    <EmbeddedResource Include="Assets\card_background_*.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Lawn">
+      <HintPath>..\..\..\..\PlantGirlsVsZombies\LawnDLL\Lawn.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="IronPython">
+      <HintPath>..\..\..\..\PlantGirlsVsZombies\LawnDLL\IronPython.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.Scripting">
+      <HintPath>..\..\..\..\PlantGirlsVsZombies\LawnDLL\Microsoft.Scripting.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>..\..\..\..\PlantGirlsVsZombies\LawnDLL\MonoMod.RuntimeDetour.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\..\..\..\PlantGirlsVsZombies\LawnDLL\MonoGame.Framework.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

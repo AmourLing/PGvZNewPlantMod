@@ -1,0 +1,26 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Plants/">
+    <Project Path="src/Plants/Ares/Ares.csproj" />
+    <Project Path="src/Plants/DoomCannon/DoomCannon.csproj" />
+    <Project Path="src/Plants/FanTian/FanTian.csproj" />
+    <Project Path="src/Plants/HuaHuoLong/HuaHuoLong.csproj" />
+    <Project Path="src/Plants/LuoJi/LuoJi.csproj" />
+    <Project Path="src/Plants/PlantBuster/PlantBuster.csproj" />
+    <Project Path="src/Plants/SeedPacketFlower/SeedPacketFlower.csproj" />
+    <Project Path="src/Plants/SeedPacketImitater/SeedPacketImitater.csproj" />
+    <Project Path="src/Plants/TeiTisi/TeiTisi.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/PGvZNewPlantMod/PGvZNewPlantMod.csproj" />
+    <Project Path="src/PGvZPlantKit/PGvZPlantKit.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/LiveSavePlugin/LiveSavePlugin.csproj" />
+    <Project Path="tests/VerifyHost/VerifyHost.csproj" />
+  </Folder>
+</Solution>

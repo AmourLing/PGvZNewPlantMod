@@ -1,0 +1,111 @@
+
+qgxlj.png
+size: 1185,532
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arm-l
+  rotate: true
+  xy: 226, 2
+  size: 132, 216
+  orig: 132, 216
+  offset: 0, 0
+  index: -1
+arm-r
+  rotate: true
+  xy: 2, 2
+  size: 132, 222
+  orig: 132, 222
+  offset: 0, 0
+  index: -1
+body1
+  rotate: false
+  xy: 347, 214
+  size: 259, 316
+  orig: 262, 318
+  offset: 2, 1
+  index: -1
+body2
+  rotate: false
+  xy: 608, 215
+  size: 260, 315
+  orig: 262, 317
+  offset: 1, 1
+  index: -1
+body3
+  rotate: true
+  xy: 870, 270
+  size: 260, 313
+  orig: 262, 315
+  offset: 1, 1
+  index: -1
+eye-cl
+  rotate: false
+  xy: 408, 182
+  size: 82, 30
+  orig: 85, 32
+  offset: 2, 1
+  index: -1
+eye-cr
+  rotate: false
+  xy: 408, 152
+  size: 100, 28
+  orig: 103, 31
+  offset: 2, 2
+  index: -1
+eye-l
+  rotate: true
+  xy: 347, 141
+  size: 71, 59
+  orig: 74, 62
+  offset: 2, 2
+  index: -1
+eye-r
+  rotate: false
+  xy: 739, 126
+  size: 121, 87
+  orig: 125, 89
+  offset: 2, 1
+  index: -1
+head
+  rotate: true
+  xy: 2, 136
+  size: 394, 343
+  orig: 396, 346
+  offset: 1, 1
+  index: -1
+leg-l
+  rotate: true
+  xy: 444, 4
+  size: 146, 293
+  orig: 146, 293
+  offset: 0, 0
+  index: -1
+leg-r
+  rotate: true
+  xy: 870, 119
+  size: 149, 302
+  orig: 149, 302
+  offset: 0, 0
+  index: -1
+weapon1
+  rotate: false
+  xy: 835, 21
+  size: 94, 96
+  orig: 96, 98
+  offset: 1, 1
+  index: -1
+weapon2
+  rotate: false
+  xy: 739, 19
+  size: 94, 98
+  orig: 96, 100
+  offset: 1, 1
+  index: -1
+weapon3
+  rotate: false
+  xy: 931, 21
+  size: 93, 96
+  orig: 95, 98
+  offset: 1, 1
+  index: -1

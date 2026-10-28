@@ -1,0 +1,42 @@
+<Project>
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <LangVersion>10.0</LangVersion>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <!-- 从 src\Plants 上溯到 WP_PGVZ，再进游戏 LawnDLL。 -->
+    <GameLawnDir>$(MSBuildThisFileDirectory)..\..\..\..\PlantGirlsVsZombies\LawnDLL</GameLawnDir>
+    <PlantKitProject>$(MSBuildThisFileDirectory)..\PGvZPlantKit\PGvZPlantKit.csproj</PlantKitProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 每个植物工程把自己的 Spine 三件套嵌进 DLL，发布包不再携带 spanim 目录。 -->
+    <EmbeddedResource Include="$(MSBuildProjectDirectory)\Assets\Spine\*.atlas;$(MSBuildProjectDirectory)\Assets\Spine\*.skel;$(MSBuildProjectDirectory)\Assets\Spine\*.png;$(MSBuildProjectDirectory)\Assets\Spine\*.json">
+      <LogicalName>PGvZNewPlantMod.Spine.%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+    <!-- 经典逐帧动画：.reanim 文本按 Content/reanim 虚拟路径读，帧图当普通贴图资源注册。 -->
+    <EmbeddedResource Include="$(MSBuildProjectDirectory)\Assets\Reanim\*.reanim">
+      <LogicalName>PGvZNewPlantMod.Reanim.%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildProjectDirectory)\Assets\Reanim\*.png;$(MSBuildProjectDirectory)\Assets\Images\*.png">
+      <LogicalName>PGvZNewPlantMod.Assets.%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(PlantKitProject)">
+      <Private>false</Private>
+    </ProjectReference>
+    <Reference Include="Lawn">
+      <HintPath>$(GameLawnDir)\Lawn.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(GameLawnDir)\MonoGame.Framework.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

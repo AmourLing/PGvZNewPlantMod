@@ -1,0 +1,11 @@
+{
+  "说明": "上一次真正发出去的版本。打包不等于发布：只有 --publish 会改这个文件。",
+  "发布": [
+    {
+      "版本": "1.0.4",
+      "时间": "2026-10-23 23:06:16",
+      "包": "PGvZNewPlantMod_CSharp_发布_20261023_230616.zip",
+      "说明": "- 修复自动 SeedId 的自定义植物在图鉴预览时触发 Plant.GetPlantDefinition 原生断言。\n- 自定义种子现在直接返回扩展后的 gPlantDefs 表项，GetImage/GetNameString 等原生调用不再报警。"
+    }
+  ]
+}

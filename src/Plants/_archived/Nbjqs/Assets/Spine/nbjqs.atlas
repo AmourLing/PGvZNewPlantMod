@@ -1,0 +1,111 @@
+
+nbjqs.png
+size: 1652,486
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 588, 167
+  size: 236, 317
+  orig: 238, 319
+  offset: 1, 1
+  index: -1
+body-a
+  rotate: false
+  xy: 826, 193
+  size: 226, 291
+  orig: 228, 294
+  offset: 1, 1
+  index: -1
+glove
+  rotate: false
+  xy: 1544, 102
+  size: 102, 127
+  orig: 105, 130
+  offset: 1, 2
+  index: -1
+hand-a-l
+  rotate: false
+  xy: 1544, 231
+  size: 106, 253
+  orig: 110, 256
+  offset: 2, 1
+  index: -1
+hand-a-r
+  rotate: false
+  xy: 626, 12
+  size: 96, 153
+  orig: 99, 157
+  offset: 1, 2
+  index: -1
+hand-l
+  rotate: true
+  xy: 1262, 61
+  size: 141, 280
+  orig: 141, 280
+  offset: 0, 0
+  index: -1
+hand-r
+  rotate: true
+  xy: 724, 21
+  size: 144, 297
+  orig: 144, 297
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 2, 91
+  size: 393, 319
+  orig: 395, 321
+  offset: 1, 1
+  index: -1
+head-a
+  rotate: true
+  xy: 323, 151
+  size: 333, 263
+  orig: 335, 267
+  offset: 1, 2
+  index: -1
+leg-a-l
+  rotate: false
+  xy: 1422, 227
+  size: 120, 257
+  orig: 120, 257
+  offset: 0, 0
+  index: -1
+leg-a-r
+  rotate: true
+  xy: 2, 2
+  size: 87, 260
+  orig: 87, 260
+  offset: 0, 0
+  index: -1
+leg-l
+  rotate: false
+  xy: 1054, 202
+  size: 144, 282
+  orig: 144, 282
+  offset: 0, 0
+  index: -1
+leg-r
+  rotate: true
+  xy: 323, 4
+  size: 145, 301
+  orig: 145, 301
+  offset: 0, 0
+  index: -1
+sa
+  rotate: true
+  xy: 1200, 204
+  size: 280, 220
+  orig: 280, 220
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: false
+  xy: 1023, 5
+  size: 237, 186
+  orig: 240, 188
+  offset: 1, 1
+  index: -1

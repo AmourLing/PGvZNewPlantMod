@@ -230,7 +230,8 @@ dotnet run --project tests\VerifyHost -c Release
 
 ## 日志与存档
 
-- 日志：`%AppData%\ZBC\PlantGirlsVsZombies\mods\PGvZNewPlantMod\plant_kit.log`- 关卡存档：模组植物写进游戏自己的关卡存档（`docs/userdata/game<档案>_<模式>.dat`），
+- 日志：`%AppData%\ZBC\PlantGirlsVsZombies\mods\PGvZNewPlantMod\plant_kit.log`
+- 关卡存档：模组植物写进游戏自己的关卡存档（`docs/userdata/game<档案>_<模式>.dat`），
   植物身份用 `包ID:植物名` 而不是数字 SeedId，所以增删包不会让旧存档串位。
 - 侧车存档：`%AppData%\ZBC\PlantGirlsVsZombies\mods\PGvZNewPlantMod\SaveData\`
   放游戏引擎装不下的额外记录（瓷砖分布、小守卫菇站位等），按存档文件配对。

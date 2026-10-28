@@ -30,3 +30,6 @@ state.slot-reloaded.json
 **/Assets/Images/
 # 测试留下的存档证据（含玩家 userdata）
 tests/save-evidence-*/
+# 探针临时产物（从游戏图集里抠出来的素材，不进仓库）
+tests/*.bmp
+tests/*.rgba
